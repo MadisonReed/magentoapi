@@ -2,7 +2,7 @@
   "name": "Magento",
   "author": "Tim Marshall <timothyjmarshall@gmail.com>",
   "description": "Magento SOAP API wrapper for Node.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./src/magento",
   "contributors": [
     {
