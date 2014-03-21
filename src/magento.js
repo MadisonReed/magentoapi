@@ -174,8 +174,8 @@ Magento.prototype.login = function(callback) {
       callback(new MagentoError('An error occurred at login', err));
       return;
     }
-
-    this.sessionId = sessId;
+    
+    self.sessionId = sessId;
     callback();
   });
 
