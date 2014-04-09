@@ -2,6 +2,12 @@
 
 This wrapper lets you talk to Magento via SOAP.
 
+## Installation
+
+`npm install magento`
+
+## Usage
+
 ```js
 var magento = require('magento')({
   host: 'your.host',
