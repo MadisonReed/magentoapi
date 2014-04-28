@@ -176,7 +176,7 @@ Magento.prototype.login = function(callback) {
     }
     
     self.sessionId = sessId;
-    callback();
+    callback(null, sessId);
   });
 
   return this;
