@@ -53,13 +53,7 @@ magento.salesOrder.list(callback);
 // or 
 
 magento.salesOrder.list({
-  filters: [ val, val, val ]
-}, callback);
-
-// or a single filter
-
-magento.salesOrder.list({
-  filters: val
+  filters: { key: 'val' }
 }, callback);
 ```
 
