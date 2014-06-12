@@ -186,6 +186,8 @@ Magento.prototype.login = function(callback) {
 Magento.prototype.changeSession = function(sessId) {
 	this.prevSessId = this.sessionId;
 	this.sessionId = sessId;
+
+	return this;
 };
 
 module.exports = Magento;
