@@ -5,30 +5,30 @@ if (!process.env.MAGENTO_USER) throw new Error('Username not present in environm
 if (!process.env.MAGENTO_PASS) throw new Error('Password not present in environment variable MAGENTO_PASS');
 
 var magento = new Magento({
-	host: process.env.MAGENTO_HOST,
-	port: 80,
-	path: '/api/xmlrpc/',
-	login: process.env.MAGENTO_USER,
-	pass: process.env.MAGENTO_PASS
+  host: process.env.MAGENTO_HOST,
+  port: 80,
+  path: '/api/xmlrpc/',
+  login: process.env.MAGENTO_USER,
+  pass: process.env.MAGENTO_PASS
 });
 
 
 console.log('Testing login');
 magento.login(function(err, sessionId) {
-	if (err) throw err;
+  if (err) throw err;
 
-	console.log(sessionId);
+  console.log(sessionId);
 
-	console.log('Changing session id and trying');
-	magento.login(function(err, newSessionId) {
-		if (err) throw err;
+  console.log('Changing session id and trying');
+  magento.login(function(err, newSessionId) {
+    if (err) throw err;
 
-		magento.changeSession(sessionId);
-		console.log('Changed session from %s to %s', newSessionId , sessionId);
+    magento.changeSession(sessionId);
+    console.log('Changed session from %s to %s', newSessionId , sessionId);
 
-		magento.directoryCountry.list(function(err, countries) {
-			if (err) throw err;
-			console.log('Found %d countries', countries.length);
-		});
-	});
+    magento.directoryCountry.list(function(err, countries) {
+      if (err) throw err;
+      console.log('Found %d countries', countries.length);
+    });
+  });
 });
