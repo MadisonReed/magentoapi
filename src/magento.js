@@ -74,7 +74,7 @@ function Magento(config) {
       magentoConfig[key] = config[key] !== undefined ? config[key] : configDefaults[key];
     }
   }
-  
+
   this.config = magentoConfig;
   this.client = xmlrpc.createClient(this.config);
   this.queue = [];
@@ -100,7 +100,7 @@ function Magento(config) {
   }
 
   this.sessionId = null;
-	this.prevSessionId = null;
+  this.prevSessionId = null;
 
   return this;
 }
@@ -175,7 +175,7 @@ Magento.prototype.login = function(callback) {
       callback(new MagentoError('An error occurred at login', err));
       return;
     }
-    
+
     self.sessionId = sessId;
     callback(null, sessId);
   });
@@ -184,10 +184,10 @@ Magento.prototype.login = function(callback) {
 };
 
 Magento.prototype.changeSession = function(sessId) {
-	this.prevSessId = this.sessionId;
-	this.sessionId = sessId;
+  this.prevSessId = this.sessionId;
+  this.sessionId = sessId;
 
-	return this;
+  return this;
 };
 
 module.exports = Magento;
