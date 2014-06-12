@@ -50,18 +50,7 @@ var protos = {
     Allows you to retrieve the list of orders. Additional filters can be applied.
   */
   list: {
-    optional: 'filters',
-    modifiers: {
-      // to do: cleanup filters, and check them all
-      /* filters: function(filters) {
-        // if filters is not an array, wrap it in an array
-        if (!Array.isArray(filters)) {
-          return [ filters ];
-        }
-
-        return filters;
-      } */
-    }
+    optional: 'filters'
   },
 
   /**

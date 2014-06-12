@@ -28,6 +28,12 @@ magento.login(function(err, sessId) {
 });
 ```
 
+If need be, you can manually change the session id.
+
+```js
+magento.changeSession(newSessionId);
+```
+
 All of the API methods take an object of params as the first argument, and a callback as the second.
 
 Or, if no params are sent, just a callback as the first argument.
