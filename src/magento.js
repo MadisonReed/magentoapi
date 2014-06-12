@@ -100,6 +100,7 @@ function Magento(config) {
   }
 
   this.sessionId = null;
+	this.prevSessionId = null;
 
   return this;
 }
@@ -180,6 +181,11 @@ Magento.prototype.login = function(callback) {
   });
 
   return this;
+};
+
+Magento.prototype.changeSession = function(sessId) {
+	this.prevSessId = this.sessionId;
+	this.sessionId = sessId;
 };
 
 module.exports = Magento;
