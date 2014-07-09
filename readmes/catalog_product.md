@@ -55,7 +55,8 @@ Allows you to retrieve information about the required product.
 
 ```js
 magento.catalogProduct.info({
-  id: val
+  id: val,
+  view: val   /* optional */
 }, callback);
 ```
 

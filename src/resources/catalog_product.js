@@ -49,7 +49,8 @@ var protos = {
     Allows you to retrieve information about the required product.
   */
   info: {
-    mandatory: 'id'
+    mandatory: 'id',
+    optional: 'storeView'
   },
 
   /**
