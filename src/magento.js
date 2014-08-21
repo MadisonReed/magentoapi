@@ -10,6 +10,7 @@ var MagentoError = require('./error.js');
 var slice = Array.prototype.slice;
 var resources = {
   catalogCategory: './resources/catalog_category.js',
+  catalogCategoryAttribute: './resources/catalog_category_attribute.js',
   catalogProduct: './resources/catalog_product.js',
   catalogProductAttribute: './resources/catalog_product_attribute.js',
   catalogProductAttributeMedia: './resources/catalog_product_attribute_media.js',

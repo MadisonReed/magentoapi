@@ -49,13 +49,16 @@ var protos = {
     Allows you to retrieve information about the required product.
   */
   info: {
-    mandatory: 'id'
+    mandatory: 'id',
+    optional: 'storeView'
   },
 
   /**
     Allows you to retrieve the list of products.
   */
-  list: true,
+  list: {
+     optional: 'filters'
+  },
 
   /**
     Get the list of additional attributes. Additional attributes are attributes that are not in the default set of attributes.

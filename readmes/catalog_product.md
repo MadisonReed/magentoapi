@@ -55,7 +55,8 @@ Allows you to retrieve information about the required product.
 
 ```js
 magento.catalogProduct.info({
-  id: val
+  id: val,
+  view: val   /* optional */
 }, callback);
 ```
 
@@ -66,6 +67,23 @@ Allows you to retrieve the list of products.
 ```js
 magento.catalogProduct.list(callback);
 ```
+//or
+
+```js
+magento.catalogProduct.listOfAdditionalAttributes({
+  filters:       val /* optional */
+}, callback);
+```
+filter examples
+
+```js
+ {'type': {'in':  'simple'}}
+```
+
+```js
+ {'created_at': {'from':  '2011-07-06 01:01:01'}}
+```
+
 
 ## [listOfAdditionalAttributes](http://www.magentocommerce.com/api/soap/catalog/catalogProduct/catalog_product.listOfAdditionalAttributes.html)
 
