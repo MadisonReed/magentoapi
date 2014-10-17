@@ -48,6 +48,7 @@ var configDefaults = {
   path: mandatory,
   login: mandatory,
   pass: mandatory,
+  secure: false,
   parallelLimit: Infinity
 };
 
@@ -61,6 +62,7 @@ var configDefaults = {
   @param {Number} [config.parallelLimit] How many requests to make in parallel, defaults to Infinity
   @param {String} config.login Login username
   @param {String} config.pass Login password
+  @param {String} config.secure Secure connection
 */
 function Magento(config) {
   var self = this;
@@ -77,7 +79,7 @@ function Magento(config) {
   }
 
   this.config = magentoConfig;
-  this.client = xmlrpc.createClient(this.config);
+  this.client = this.config.secure ? xmlrpc.createSecureClient(this.config) : xmlrpc.createClient(this.config);
   this.queue = [];
   this.queue.running = 0;
   this.queue.parallelLimit = this.config.parallelLimit;
