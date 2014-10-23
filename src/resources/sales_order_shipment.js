@@ -58,17 +58,7 @@ var protos = {
     Allows you to retrieve the list of order shipments. Additional filters can be applied.
   */
   list: {
-    mandatory: 'filters',
-    modifiers: {
-      filters: function(filters) {
-        // if filters is not an array, wrap it in an array
-        if (!Array.isArray(filters)) {
-          return [ filters ];
-        }
-
-        return filters;
-      }
-    }
+    mandatory: 'filters'
   },
 
   /**
