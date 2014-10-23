@@ -70,13 +70,7 @@ magento.salesOrderShipment.list(callback);
 // or 
 
 magento.salesOrderShipment.list({
-  filters: [ val, val, val ]
-}, callback);
-
-// or a single filter
-
-magento.salesOrderShipment.list({
-  filters: val
+  filters: { key: 'val' }
 }, callback);
 ```
 
