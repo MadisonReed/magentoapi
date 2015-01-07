@@ -57,7 +57,7 @@ var protos = {
     Allows you to retrieve the list of products.
   */
   list: {
-     optional: 'filters'
+     optional: 'filters,storeView'
   },
 
   /**
