@@ -48,7 +48,8 @@ var configDefaults = {
   path: mandatory,
   login: mandatory,
   pass: mandatory,
-  parallelLimit: Infinity
+  parallelLimit: Infinity,
+  basic_auth: false  // passed to xmlrpc
 };
 
 /**
