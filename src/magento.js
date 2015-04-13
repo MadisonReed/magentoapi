@@ -48,7 +48,8 @@ var configDefaults = {
   path: mandatory,
   login: mandatory,
   pass: mandatory,
-  parallelLimit: Infinity
+  parallelLimit: Infinity,
+  secure: false
 };
 
 /**
