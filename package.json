@@ -1,10 +1,14 @@
 {
   "name": "magento",
-  "author": "Tim Marshall <timothyjmarshall@gmail.com>",
+  "author": "Stephen Keep <stephenkeep@gmail.com>",
   "description": "Magento SOAP API wrapper for Node.js",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./src/magento",
   "contributors": [
+    {
+      "name": "Stephen Keep",
+      "email": "stephenkeep@gmail.com"
+    },
     {
       "name": "Tim Marshall",
       "email": "timothyjmarshall@gmail.com"
@@ -14,15 +18,15 @@
     "node": ">=0.10.20"
   },
   "dependencies" : {
-    "request": "2.34.0",
-    "xmlrpc": "1.2.0"
-  },
+-    "request": "2.34.0",
+-    "xmlrpc": "1.2.0"
+-  },
   "keywords": [
     "magento",
     "soap",
     "api",
     "xml"
   ],
-  "repository": "git://github.com/MadisonReed/magentoapi",
+  "repository": "git://github.com/stephenkeep/magentoapi",
   "license": "MIT"
 }
