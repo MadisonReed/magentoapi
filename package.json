@@ -1,10 +1,14 @@
 {
   "name": "magento",
-  "author": "Stephen Keep <stephenkeep@gmail.com>",
+  "author": "Ernest Conill <ernestconill@gmail.com>",
   "description": "Magento SOAP API wrapper for Node.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "./src/magento",
   "contributors": [
+    {
+      "name": "Ernest Conill",
+      "email": "ernestconill@gmail.com"
+    },
     {
       "name": "Stephen Keep",
       "email": "stephenkeep@gmail.com"
@@ -18,15 +22,15 @@
     "node": ">=0.10.20"
   },
   "dependencies" : {
--    "request": "2.34.0",
--    "xmlrpc": "1.2.0"
--  },
+    "request": "2.34.0",
+    "xmlrpc": "1.2.0"
+  },
   "keywords": [
     "magento",
     "soap",
     "api",
     "xml"
   ],
-  "repository": "git://github.com/stephenkeep/magentoapi",
+  "repository": "git://github.com/netusco/magentoapi",
   "license": "MIT"
 }
