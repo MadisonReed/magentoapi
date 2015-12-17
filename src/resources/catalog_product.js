@@ -21,36 +21,38 @@ var protos = {
     Allows you to create a new product and return ID of the created product.
   */
   create: {
-    mandatory: 'type,set,sku,data'
+    mandatory: 'type,set,sku,data',
+    optional: 'storeView'
   },
 
   /**
     Allows you to set/get the current store view.
   */
   currentStore: {
-    optional: 'view'
+    optional: 'storeView'
   },
 
   /**
     Allows you to delete the required product.
   */
   'delete': {
-    mandatory: 'id'
+    mandatory: 'product'
   },
 
   /**
     Allows you to get the product special price data.
   */
   getSpecialPrice: {
-    mandatory: 'id'
+    mandatory: 'product',
+    optional: 'storeView'
   },
 
   /**
     Allows you to retrieve information about the required product.
   */
   info: {
-    mandatory: 'id',
-    optional: 'storeView'
+    mandatory: 'productId',
+    optional: 'storeView,attributes'
   },
 
   /**
@@ -71,7 +73,7 @@ var protos = {
     Allows you to set the product special price.
   */
   setSpecialPrice: {
-    mandatory: 'id,specialPrice,from,to',
+    mandatory: 'productId,specialPrice,fromDate,toDate',
     optional: 'storeView',
     modifiers: {
       from: dateToISO8601Time,
@@ -83,7 +85,7 @@ var protos = {
     Allows you to update the required product. Note that you should specify only those parameters which you want to be updated.
   */
   update: {
-    mandatory: 'id,data',
+    mandatory: 'product,productData',
     optional: 'storeView'
   }
 };
