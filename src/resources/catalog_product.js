@@ -21,7 +21,7 @@ var protos = {
     Allows you to create a new product and return ID of the created product.
   */
   create: {
-    mandatory: 'type,set,sku,data',
+    mandatory: 'type,set,sku,productData'
     optional: 'storeView'
   },
 
@@ -36,7 +36,8 @@ var protos = {
     Allows you to delete the required product.
   */
   'delete': {
-    mandatory: 'product'
+    mandatory: 'product',
+    optional: 'identifierType'
   },
 
   /**
@@ -59,7 +60,7 @@ var protos = {
     Allows you to retrieve the list of products.
   */
   list: {
-     optional: 'filters'
+     optional: 'filters,storeView'
   },
 
   /**
@@ -86,7 +87,7 @@ var protos = {
   */
   update: {
     mandatory: 'product,productData',
-    optional: 'storeView'
+    optional: 'storeView,identifierType'
   }
 };
 
