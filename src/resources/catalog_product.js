@@ -21,7 +21,7 @@ var protos = {
     Allows you to create a new product and return ID of the created product.
   */
   create: {
-    mandatory: 'type,set,sku,productData'
+    mandatory: 'type,set,sku,productData',
     optional: 'storeView'
   },
 
