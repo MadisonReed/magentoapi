@@ -35,7 +35,7 @@ var resources = {
   customerGroup: './resources/customer_group.js',
   directoryCountry: './resources/directory_country.js',
   directoryRegion: './resources/directory_region.js',
-  ourlaborTools: './resources/ourlabor_tools.js',
+  ourlaborisjoyTools: './resources/ourlaborisjoy_tools.js',
   salesOrder: './resources/sales_order.js',
   salesOrderCreditMemo: './resources/sales_order_credit_memo.js',
   salesOrderInvoice: './resources/sales_order_invoice.js',

@@ -9,10 +9,10 @@ var curry = require('../curry.js');
 /**
   Allows you to manage products.
 */
-function OurlaborTools() {
-  this.prefix = 'ourlabor_tools.';
+function OurlaborisjoyTools() {
+  this.prefix = 'ourlaborisjoy_tools.';
 }
-util.inherits(OurlaborTools, events.EventEmitter);
+util.inherits(OurlaborisjoyTools, events.EventEmitter);
 
 
 // prototypes we will be applying
@@ -24,13 +24,21 @@ var protos = {
   configurable_create_for_reals: {
     mandatory: 'productId,attributes,variants',
     optional: 'identifierType'
+  },
+
+  /**
+   * Allows you to add product attributes that cannot be added through normal api calls
+   */
+  add_msrp_attribute: {
+    mandatory: 'product,msrp',
+    optional: 'identifierType,storeView' 
   }
 };
 
 // creating prototypes using curry func
 for (var key in protos) {
-  OurlaborTools.prototype[key] = curry(prototypeBase, key, protos[key]);
+  OurlaborisjoyTools.prototype[key] = curry(prototypeBase, key, protos[key]);
 }
 protos = undefined;
 
-module.exports = OurlaborTools;
+module.exports = OurlaborisjoyTools;
