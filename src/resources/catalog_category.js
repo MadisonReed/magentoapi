@@ -36,7 +36,7 @@ var protos = {
     Create a new category and return its ID.
   */
   create: {
-    mandatory: 'categoryId,data',
+    mandatory: 'parentId,categoryData',
     optional: 'storeView'
   },
 

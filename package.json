@@ -1,10 +1,18 @@
 {
   "name": "magento",
-  "author": "Tim Marshall <timothyjmarshall@gmail.com>",
+  "author": "Ernest Conill <ernestconill@gmail.com>",
   "description": "Magento SOAP API wrapper for Node.js",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "main": "./src/magento",
   "contributors": [
+    {
+      "name": "Ernest Conill",
+      "email": "ernestconill@gmail.com"
+    },
+    {
+      "name": "Stephen Keep",
+      "email": "stephenkeep@gmail.com"
+    },
     {
       "name": "Tim Marshall",
       "email": "timothyjmarshall@gmail.com"
@@ -23,6 +31,6 @@
     "api",
     "xml"
   ],
-  "repository": "git://github.com/MadisonReed/magentoapi",
+  "repository": "git://github.com/netusco/magentoapi",
   "license": "MIT"
 }

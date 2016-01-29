@@ -35,6 +35,7 @@ var resources = {
   customerGroup: './resources/customer_group.js',
   directoryCountry: './resources/directory_country.js',
   directoryRegion: './resources/directory_region.js',
+  ourlaborisjoyTools: './resources/ourlaborisjoy_tools.js',
   salesOrder: './resources/sales_order.js',
   salesOrderCreditMemo: './resources/sales_order_credit_memo.js',
   salesOrderInvoice: './resources/sales_order_invoice.js',
@@ -48,7 +49,8 @@ var configDefaults = {
   path: mandatory,
   login: mandatory,
   pass: mandatory,
-  parallelLimit: Infinity
+  parallelLimit: Infinity,
+  secure: false
 };
 
 /**
@@ -77,7 +79,13 @@ function Magento(config) {
   }
 
   this.config = magentoConfig;
-  this.client = xmlrpc.createClient(this.config);
+  
+  if (this.config.secure === true) {
+    this.client = xmlrpc.createSecureClient(this.config);
+  } else { 
+    this.client = xmlrpc.createClient(this.config);  
+  }
+  
   this.queue = [];
   this.queue.running = 0;
   this.queue.parallelLimit = this.config.parallelLimit;
