@@ -15,7 +15,8 @@ var magento = new MagentoAPI({
   port: 80,
   path: '/api/xmlrpc/',
   login: 'your_username',
-  pass: 'your_pass'
+  pass: 'your_pass',
+  isSecure: false
 });
 
 magento.login(function(err, sessId) {
