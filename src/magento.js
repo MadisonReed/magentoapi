@@ -77,7 +77,11 @@ function Magento(config) {
   }
 
   this.config = magentoConfig;
-  this.client = xmlrpc.createClient(this.config);
+  if (!config.secure) {
+    this.client = xmlrpc.createClient(this.config);
+  } else {
+      this.client = xmlrpc.createSecureClient(this.config);
+  }
   this.queue = [];
   this.queue.running = 0;
   this.queue.parallelLimit = this.config.parallelLimit;
