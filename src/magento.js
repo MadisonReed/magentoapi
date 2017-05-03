@@ -77,7 +77,7 @@ function Magento(config) {
   }
 
   this.config = magentoConfig;
-  if (!config.secure) {
+  if (!config.is_secure) {
     this.client = xmlrpc.createClient(this.config);
   } else {
       this.client = xmlrpc.createSecureClient(this.config);
