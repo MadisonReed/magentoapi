@@ -48,7 +48,9 @@ var configDefaults = {
   path: mandatory,
   login: mandatory,
   pass: mandatory,
-  parallelLimit: Infinity
+  parallelLimit: Infinity,
+  is_secure: false,
+  secure: false
 };
 
 /**
@@ -77,10 +79,10 @@ function Magento(config) {
   }
 
   this.config = magentoConfig;
-  if (!config.is_secure) {
-    this.client = xmlrpc.createClient(this.config);
+  if (this.config.is_secure || this.config.secure || this.config.port == 443) {
+    this.client = xmlrpc.createSecureClient(this.config);
   } else {
-      this.client = xmlrpc.createSecureClient(this.config);
+    this.client = xmlrpc.createClient(this.config);
   }
   this.queue = [];
   this.queue.running = 0;
