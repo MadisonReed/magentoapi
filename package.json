@@ -23,6 +23,6 @@
     "api",
     "xml"
   ],
-  "repository": "git://github.com/MadisonReed/magentoapi",
+  "repository": "https://github.com/aaabhilash97/magentoapi.git",
   "license": "MIT"
 }
