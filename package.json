@@ -1,5 +1,5 @@
 {
-  "name": "magento",
+  "name": "magento-secure",
   "author": "Tim Marshall <timothyjmarshall@gmail.com>",
   "description": "Magento SOAP API wrapper for Node.js",
   "version": "0.0.5",
