@@ -1,8 +1,8 @@
 {
-  "name": "magento",
+  "name": "magento-secure",
   "author": "Tim Marshall <timothyjmarshall@gmail.com>",
   "description": "Magento SOAP API wrapper for Node.js",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./src/magento",
   "contributors": [
     {
@@ -13,7 +13,7 @@
   "engines": {
     "node": ">=0.10.20"
   },
-  "dependencies" : {
+  "dependencies": {
     "request": "2.34.0",
     "xmlrpc": "1.2.0"
   },
@@ -23,6 +23,6 @@
     "api",
     "xml"
   ],
-  "repository": "git://github.com/MadisonReed/magentoapi",
+  "repository": "https://github.com/aaabhilash97/magentoapi.git",
   "license": "MIT"
 }
